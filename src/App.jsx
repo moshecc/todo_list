@@ -13,7 +13,7 @@ export default function App() {
   const [missions, setMissions] = useState([]);
 
   const newMission = async(mission)=>{
-    let res = await axios.post('http://localhost:5174/' + 'mission/setMission', mission);
+    let res = await axios.post(base_url + 'mission/setMission', mission);
     if(res.data.err){
       return;
     }
